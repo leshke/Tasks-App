@@ -1,0 +1,92 @@
+.imagesWrapper {
+  padding: 0 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.432);
+}
+
+.modalWindow {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  background-color: #fff;
+}
+
+.modalContent {
+  display: flex;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  padding-left: 10px;
+}
+
+.right span{
+  font-size: 13px;
+  color: #888;
+}
+
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  height: 30px;
+  background-color: #4997D0;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input {
+  margin-bottom: 20px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #444;
+}
+
+.closeModal {
+  display: block;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: end;
+  margin-left: auto;
+}
+
+p{
+  margin-top: 6px;
+}
