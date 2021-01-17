@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './table/App';
-// import App from './todo/App';
-// import App from './getImages/App';
-// import App from './notes/App';
-import reportWebVitals from './todo/reportWebVitals';
+import MainApp from './MainApp';
+import reportWebVitals from './Todo/reportWebVitals';
 
-ReactDOM.render(<App />,
+ReactDOM.render(<MainApp />,
   document.getElementById('root')
 );
 

@@ -1,14 +1,17 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import MainAppProvider from './state';
 import TableOfWorkers from './TableOfWorkers';
 
-const App = () => {
+const TableApp = () => {
   return (
     <MainAppProvider>
-      <TableOfWorkers />
+      <div className={styles.App}>
+        <h1>Salary Calculator</h1>
+        <TableOfWorkers />
+      </div>
     </MainAppProvider>
   )
 }
 
-export default App;
+export default TableApp;

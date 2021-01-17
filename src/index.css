@@ -1,13 +1,68 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/*=====NavLink======*/
+
+.mr-auto a {
+  color: #d1d1d1;
+  width: 7rem;
+  padding: .4rem;
+  text-align: center;
+}
+
+.mr-auto a:hover {
+  text-decoration: none;
+  color: #747474;
+  transition: ease-in .4s;
+}
+
+.mr-auto a.active {
+  color: #ff5b5b;
+  border-left: 2px solid #ff5b5b;
+  border-right: 2px solid #ff5b5b;
+}
+
+/*=======Bootstarp form=======*/
+
+.form-group .form-control {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.item-enter-active {
+  animation: fade-in 600ms forwards;
+}
+
+.item-exit-active {
+  animation: fade-out 600ms forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

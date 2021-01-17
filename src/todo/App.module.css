@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding-bottom: 100px;
+  min-height: 100vh;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.complete span {
+  text-decoration: line-through;
+}
+
+.App span {
+  width: 350px;
+  word-wrap: break-word;
+}
+
+.App li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #cccc;
+}
+
+.App li:last-child {
+  border-bottom: none;
+}
+
+.App ul {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 450px;
+  background-color: #ffff;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.task {
+  font-size: 1.1rem;
+  color: #8b8b8b;
+  padding: .5rem;
+}
+
+/*===BTNS===*/
+
+.btnDel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #ff0000;
+  color: #ffff;
+  border-radius: 50%;
+  font-size: .7rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0;
+}
+
+.btnDel:focus {
+  outline: none;
+}

@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import TodoProvider from './state';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
-const App = () => {
+const TodoApp = () => {
   return (
     <TodoProvider >
-      <div className="App">
-        <h3>Todo list</h3>
+      <div className={styles.App}>
+        <h1>Todo list</h1>
         <TodoList />
         <TodoForm />
       </div>
@@ -16,4 +16,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default TodoApp;

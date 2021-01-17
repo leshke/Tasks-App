@@ -1,29 +1,27 @@
 import React, { useState } from 'react'
+import { Table } from 'react-bootstrap'
 import { AppContext } from './state'
+import styles from './App.module.css'
 
 const TableOfWorkers = () => {
     const { workers, totalSalary } = AppContext()
-    return <table>
+    return <Table striped bordered hover variant="dark">
         <tbody>
             <tr>
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Work Days</th>
-                <th>Salary</th>
-                <th>Total</th>
+                <th>Salary per Day</th>
+                <th>Total (salary * days)</th>
             </tr>
             {workers.map(item => <WorkerItem key={item.id} {...item} />)}
         </tbody>
         <tfoot>
-            <tr colSpan="5">
-                <td className="hidden-cell"></td>
-                <td className="hidden-cell"></td>
-                <td className="hidden-cell"></td>
-                <td className="hidden-cell"></td>
-                <td className='total'>Total: {totalSalary}</td>
+            <tr>
+                <td className={styles.totalSalary} colSpan="5">Final Total: {totalSalary}</td>
             </tr>
         </tfoot>
-    </table>
+    </Table>
 }
 
 const WorkerItem = (props) => {

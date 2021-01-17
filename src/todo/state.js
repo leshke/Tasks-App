@@ -2,24 +2,24 @@ import React, { useContext, useReducer } from 'react';
 
 const initialState = [{
     id: 1,
-    task: "Give dog a bath",
-    complete: true
-}, {
-    id: 2,
-    task: "Do laundry",
-    complete: true
-}, {
-    id: 3,
-    task: "Vacuum floor",
+    task: "Find a job",
     complete: false
 }, {
+    id: 2,
+    task: "Learn React Native",
+    complete: false
+}, {
+    id: 3,
+    task: "Go gym",
+    complete: true
+}, {
     id: 4,
-    task: "Feed cat",
+    task: "Learn JS",
     complete: true
 }, {
     id: 5,
-    task: "Change light bulbs",
-    complete: false
+    task: "Learn React/Redux",
+    complete: true
 }]
 
 const TodoContext = React.createContext()
@@ -30,7 +30,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'add':
             let newItem = {
-                id: state[state.length - 1].id + 1,
+                id: state.length ? state[state.length - 1].id + 1 : 1,
                 task: action.item,
                 complete: false
             }
@@ -56,7 +56,7 @@ const TodoProvider = ({ children }) => {
     const toggleTodo = (itemId) => dispatch({ type: 'toggle', itemId })
     const removeTodo = (itemId) => dispatch({ type: 'remove', itemId })
 
-// WITH USE STATE
+    // WITH USE STATE
     // const [todos, setTodo] = useState(initialState)
 
     // const addTodo = (item) => {

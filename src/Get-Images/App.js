@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import ImagesContent from './Images';
 
-const App = () => {
+const ImageListApp = () => {
   const [img, setImg] = useState([])
-  
   const getPhotos = async () => {
     let response = await fetch('https://boiling-refuge-66454.herokuapp.com/images')
     let photosFromServ = await response.json();
@@ -15,8 +14,11 @@ const App = () => {
     getPhotos()
   }, [])
 
-  return <ImagesContent photos={img} />
-
+  return (
+    img.length === 0 ?
+      <div className={styles.preloader}>Loading...</div> :
+      <ImagesContent photos={img} />
+  )
 }
 
-export default App;
+export default ImageListApp;
